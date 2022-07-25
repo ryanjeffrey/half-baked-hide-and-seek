@@ -38,6 +38,10 @@ shedButton.addEventListener('click', () => {
 
 function handleGuess(correctSpot, userGuess) {
     // reset the styles
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
+    shedContainer.classList.remove('face');
+
     // then increment the guesses
     totalGuesses++;
 
