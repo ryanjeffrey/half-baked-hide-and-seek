@@ -11,6 +11,8 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
+const resetButton = document.getElementById('reset-button');
+
 // initialize state
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
