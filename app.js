@@ -23,18 +23,21 @@ let totalGuesses = 0;
 treeButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
+    removeFace();
     handleGuess(answer, 'tree');
 });
 
 boulderButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
+    removeFace();
     handleGuess(answer, 'boulder');
 });
 
 shedButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
+    removeFace();
     handleGuess(answer, 'shed');
 });
 
@@ -49,12 +52,7 @@ resetButton.addEventListener('click', () => {
 });
 
 function handleGuess(correctSpot, userGuess) {
-    // reset the styles
-    treeContainer.classList.remove('face');
-    boulderContainer.classList.remove('face');
-    shedContainer.classList.remove('face');
-
-    // then increment the guesses
+    // increment the guesses
     totalGuesses++;
 
     // then grab the appropriate container element for the correct guess from the DOM
@@ -74,4 +72,11 @@ function handleGuess(correctSpot, userGuess) {
     winsEl.textContent = correctGuesses;
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
+}
+
+function removeFace() {
+    // reset the styles
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
+    shedContainer.classList.remove('face');
 }
