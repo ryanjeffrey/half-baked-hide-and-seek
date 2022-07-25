@@ -49,6 +49,7 @@ resetButton.addEventListener('click', () => {
     winsEl.textContent = correctGuesses;
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
+    removeFace();
 });
 
 function handleGuess(correctSpot, userGuess) {
