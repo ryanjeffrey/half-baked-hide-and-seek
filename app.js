@@ -38,6 +38,16 @@ shedButton.addEventListener('click', () => {
     handleGuess(answer, 'shed');
 });
 
+resetButton.addEventListener('click', () => {
+    correctGuesses = 0;
+    incorrectGuesses = 0;
+    totalGuesses = 0;
+
+    winsEl.textContent = correctGuesses;
+    lossesEl.textContent = incorrectGuesses;
+    totalEl.textContent = totalGuesses;
+});
+
 function handleGuess(correctSpot, userGuess) {
     // reset the styles
     treeContainer.classList.remove('face');
