@@ -15,6 +15,7 @@ const totalEl = document.getElementById('total');
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
 let correctGuesses = 0;
+let incorrectGuesses = 0;
 let totalGuesses = 0;
 
 treeButton.addEventListener('click', () => {
