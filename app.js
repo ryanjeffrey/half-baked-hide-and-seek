@@ -11,6 +11,9 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
+const tryAgainButton = document.getElementById('try-again-button');
+const resetButton = document.getElementById('reset-button');
+
 // initialize state
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
@@ -36,13 +39,31 @@ shedButton.addEventListener('click', () => {
     handleGuess(answer, 'shed');
 });
 
-function handleGuess(correctSpot, userGuess) {
-    // reset the styles
-    treeContainer.classList.remove('face');
-    boulderContainer.classList.remove('face');
-    shedContainer.classList.remove('face');
+tryAgainButton.addEventListener('click', () => {
+    removeFace();
+    showGuessButtons();
 
-    // then increment the guesses
+    // hide 'try again' button
+    tryAgainButton.classList.add('hidden');
+});
+
+resetButton.addEventListener('click', () => {
+    correctGuesses = 0;
+    incorrectGuesses = 0;
+    totalGuesses = 0;
+
+    winsEl.textContent = correctGuesses;
+    lossesEl.textContent = incorrectGuesses;
+    totalEl.textContent = totalGuesses;
+    removeFace();
+    showGuessButtons();
+
+    // hide 'try again' button
+    tryAgainButton.classList.add('hidden');
+});
+
+function handleGuess(correctSpot, userGuess) {
+    // increment the guesses
     totalGuesses++;
 
     // then grab the appropriate container element for the correct guess from the DOM
@@ -62,4 +83,28 @@ function handleGuess(correctSpot, userGuess) {
     winsEl.textContent = correctGuesses;
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
+
+    hideGuessButtons();
+
+    // show 'try again' button
+    tryAgainButton.classList.remove('hidden');
+}
+
+function removeFace() {
+    // reset the styles
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
+    shedContainer.classList.remove('face');
+}
+
+function hideGuessButtons() {
+    treeButton.disabled = true;
+    boulderButton.disabled = true;
+    shedButton.disabled = true;
+}
+
+function showGuessButtons() {
+    treeButton.disabled = false;
+    boulderButton.disabled = false;
+    shedButton.disabled = false;
 }

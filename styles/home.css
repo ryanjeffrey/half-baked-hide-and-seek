@@ -22,3 +22,15 @@
     content: '😃';
     position: absolute;
 }
+
+#reset-button {
+    margin-top: 20px;
+}
+
+#try-again-button {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
