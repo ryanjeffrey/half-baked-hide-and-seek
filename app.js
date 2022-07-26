@@ -24,21 +24,18 @@ let totalGuesses = 0;
 treeButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
-    removeFace();
     handleGuess(answer, 'tree');
 });
 
 boulderButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
-    removeFace();
     handleGuess(answer, 'boulder');
 });
 
 shedButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
     const answer = hidingPlaces[hidingSpot];
-    removeFace();
     handleGuess(answer, 'shed');
 });
 
