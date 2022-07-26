@@ -43,9 +43,9 @@ tryAgainButton.addEventListener('click', () => {
     removeFace();
 
     // show buttons
-    treeButton.classList.remove('hidden');
-    boulderButton.classList.remove('hidden');
-    shedButton.classList.remove('hidden');
+    treeButton.disabled = false;
+    boulderButton.disabled = false;
+    shedButton.disabled = false;
 
     // hide 'try again' button
     tryAgainButton.classList.add('hidden');
@@ -85,9 +85,9 @@ function handleGuess(correctSpot, userGuess) {
     totalEl.textContent = totalGuesses;
 
     // hide guess buttons
-    treeButton.classList.add('hidden');
-    boulderButton.classList.add('hidden');
-    shedButton.classList.add('hidden');
+    treeButton.disabled = true;
+    boulderButton.disabled = true;
+    shedButton.disabled = true;
 
     // show 'try again' button
     tryAgainButton.classList.remove('hidden');
