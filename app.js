@@ -107,3 +107,9 @@ function removeFace() {
     boulderContainer.classList.remove('face');
     shedContainer.classList.remove('face');
 }
+
+function hideGuessButtons() {
+    treeButton.disabled = true;
+    boulderButton.disabled = true;
+    shedButton.disabled = true;
+}
