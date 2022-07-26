@@ -60,6 +60,14 @@ resetButton.addEventListener('click', () => {
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
     removeFace();
+
+    // show buttons
+    treeButton.disabled = false;
+    boulderButton.disabled = false;
+    shedButton.disabled = false;
+
+    // hide 'try again' button
+    tryAgainButton.classList.add('hidden');
 });
 
 function handleGuess(correctSpot, userGuess) {
