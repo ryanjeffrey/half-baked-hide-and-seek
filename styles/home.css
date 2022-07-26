@@ -30,3 +30,7 @@
 #try-again-button {
     margin-bottom: 20px;
 }
+
+.hidden {
+    display: none;
+}
