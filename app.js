@@ -74,6 +74,14 @@ function handleGuess(correctSpot, userGuess) {
     winsEl.textContent = correctGuesses;
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
+
+    // hide guess buttons
+    treeButton.classList.add('hidden');
+    boulderButton.classList.add('hidden');
+    shedButton.classList.add('hidden');
+
+    // show 'try again' button
+    tryAgainButton.classList.remove('hidden');
 }
 
 function removeFace() {
