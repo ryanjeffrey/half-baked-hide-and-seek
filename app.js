@@ -11,6 +11,7 @@ const winsEl = document.getElementById('wins');
 const lossesEl = document.getElementById('losses');
 const totalEl = document.getElementById('total');
 
+const tryAgainButton = document.getElementById('try-again-button');
 const resetButton = document.getElementById('reset-button');
 
 // initialize state
