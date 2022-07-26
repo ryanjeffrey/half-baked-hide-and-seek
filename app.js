@@ -42,6 +42,18 @@ shedButton.addEventListener('click', () => {
     handleGuess(answer, 'shed');
 });
 
+tryAgainButton.addEventListener('click', () => {
+    removeFace();
+
+    // show buttons
+    treeButton.classList.remove('hidden');
+    boulderButton.classList.remove('hidden');
+    shedButton.classList.remove('hidden');
+
+    // hide 'try again' button
+    tryAgainButton.classList.add('hidden');
+});
+
 resetButton.addEventListener('click', () => {
     correctGuesses = 0;
     incorrectGuesses = 0;
