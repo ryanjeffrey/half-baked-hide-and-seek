@@ -41,11 +41,7 @@ shedButton.addEventListener('click', () => {
 
 tryAgainButton.addEventListener('click', () => {
     removeFace();
-
-    // show buttons
-    treeButton.disabled = false;
-    boulderButton.disabled = false;
-    shedButton.disabled = false;
+    showGuessButtons();
 
     // hide 'try again' button
     tryAgainButton.classList.add('hidden');
@@ -60,11 +56,7 @@ resetButton.addEventListener('click', () => {
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
     removeFace();
-
-    // show buttons
-    treeButton.disabled = false;
-    boulderButton.disabled = false;
-    shedButton.disabled = false;
+    showGuessButtons();
 
     // hide 'try again' button
     tryAgainButton.classList.add('hidden');
