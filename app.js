@@ -110,3 +110,9 @@ function hideGuessButtons() {
     boulderButton.disabled = true;
     shedButton.disabled = true;
 }
+
+function showGuessButtons() {
+    treeButton.disabled = false;
+    boulderButton.disabled = false;
+    shedButton.disabled = false;
+}
