@@ -92,10 +92,7 @@ function handleGuess(correctSpot, userGuess) {
     lossesEl.textContent = incorrectGuesses;
     totalEl.textContent = totalGuesses;
 
-    // hide guess buttons
-    treeButton.disabled = true;
-    boulderButton.disabled = true;
-    shedButton.disabled = true;
+    hideGuessButtons();
 
     // show 'try again' button
     tryAgainButton.classList.remove('hidden');
